@@ -6,21 +6,24 @@
   <!-- TODO: Cambia el título por algo relacionado con tu temática -->
   <title>Nintendo DS</title>
   <link rel="stylesheet" href="/styles/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
 </head>
 <body>
 
   <!-- CABECERA GLOBAL DEL SITIO -->
   <header class="site-header">
     <!-- TODO: Cambia el título por algo relacionado con tu temática -->
-    <h1>Mi Sitio Web</h1>
+    <h1>Nintendo DS y el cambio generacional</h1>
 
     <!-- TODO: Menú superior con enlaces a secciones de la misma página -->
     <nav class="main-nav">
-        Inicio
-        Galería
-        Tabla
-        Formulario
-        Contacto
+        <a href="#hero"> Inicio</a>
+        <a href="#gallery"> Galería </a>
+        <a href="#chart"> Tabla </a>
+        <a href="#form"> Formulario </a>
+        <a href="#contact"> Contacto </a>
     </nav>
   </header>
 
@@ -29,11 +32,11 @@
 
   <!-- MENÚ LATERAL DESLIZANTE -->
   <nav id="sideMenu" class="side-menu">
-        Inicio
-        Galería
-        Tabla
-        Formulario
-        Contacto
+        <a href="#hero"> Inicio </a>
+        <a href="#gallery"> Galería </a>
+        <a href="#chart"> Tabla </a>
+        <a href="#form"> Formulario </a>
+        <a href="#contact"> Contacto </a>
   </nav>
 
   <!-- CONTENIDO PRINCIPAL -->
@@ -42,27 +45,34 @@
     <!-- SECCIÓN HERO -->
     <section id="hero">
       <!-- TODO: Crear una sección destacada (texto + imagen) -->
-      <h2>Sección Hero</h2>
-      <p>Aquí puedes presentar el tema principal de tu web.</p>
+      <h2>La consola que llegó a todo el mundo</h2>
+      <figure><img src="img/NDS.png" width="30%"></figure>
+      <p>
+
+      </p>
       <!-- TODO: Añadir imagen relacionada -->
     </section>
 
     <!-- SECCIÓN GALERÍA -->
-    <section>
+    <section id="gallery">
       <h2>Galería de imágenes</h2>
+        <figure><img src="img/NDS.png" width="30%"></figure>
+        <figure><img src="img/NDS_presentacion.png" width="30%"></figure>
+        <figure><img src="img/NDS_prototipo.png" width="30%"></figure>
+
       <!-- TODO: Usar CSS (preferiblemente Flex/Grid) para organizar las imágenes -->
       <!-- Mínimo 6 imágenes -->
     </section>
 
     <!-- SECCIÓN TABLA -->
-    <section>
+    <section id="chart">
       <h2>Tabla de datos</h2>
       <!-- TODO: Crear una tabla coherente con tu temática -->
       <!-- Ejemplo: clasificación, precios, comparativa, etc. -->
     </section>
 
     <!-- SECCIÓN FORMULARIO -->
-    <section>
+    <section id="form">
       <h2>Formulario</h2>
       <!-- TODO: Crear un formulario con al menos 3 campos y un botón de envío -->
     </section>
@@ -71,7 +81,7 @@
     <!-- Por ejemplo: Sobre mí, Servicios, Noticias, etc. -->
 
     <!-- SECCIÓN CONTACTO / CIERRE -->
-    <section>
+    <section id="contact">
       <h2>Contacto</h2>
       <!-- TODO: Texto, datos de contacto ficticios, redes, etc. -->
     </section>
