@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- TODO: Cambia el título por algo relacionado con tu temática -->
+  <title>Nintendo DS</title>
+  <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+
+  <!-- CABECERA GLOBAL DEL SITIO -->
+  <header class="site-header">
+    <!-- TODO: Cambia el título por algo relacionado con tu temática -->
+    <h1>Mi Sitio Web</h1>
+
+    <!-- TODO: Menú superior con enlaces a secciones de la misma página -->
+    <nav class="main-nav">
+        Inicio
+        Galería
+        Tabla
+        Formulario
+        Contacto
+    </nav>
+  </header>
+
+  <!-- BOTÓN HAMBURGUESA FIJO PARA EL MENÚ LATERAL -->
+  <button class="open-menu" aria-label="Abrir menú lateral">☰</button>
+
+  <!-- MENÚ LATERAL DESLIZANTE -->
+  <nav id="sideMenu" class="side-menu">
+        Inicio
+        Galería
+        Tabla
+        Formulario
+        Contacto
+  </nav>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main>
+
+    <!-- SECCIÓN HERO -->
+    <section id="hero">
+      <!-- TODO: Crear una sección destacada (texto + imagen) -->
+      <h2>Sección Hero</h2>
+      <p>Aquí puedes presentar el tema principal de tu web.</p>
+      <!-- TODO: Añadir imagen relacionada -->
+    </section>
+
+    <!-- SECCIÓN GALERÍA -->
+    <section>
+      <h2>Galería de imágenes</h2>
+      <!-- TODO: Usar CSS (preferiblemente Flex/Grid) para organizar las imágenes -->
+      <!-- Mínimo 6 imágenes -->
+    </section>
+
+    <!-- SECCIÓN TABLA -->
+    <section>
+      <h2>Tabla de datos</h2>
+      <!-- TODO: Crear una tabla coherente con tu temática -->
+      <!-- Ejemplo: clasificación, precios, comparativa, etc. -->
+    </section>
+
+    <!-- SECCIÓN FORMULARIO -->
+    <section>
+      <h2>Formulario</h2>
+      <!-- TODO: Crear un formulario con al menos 3 campos y un botón de envío -->
+    </section>
+
+    <!-- OTRAS SECCIONES QUE QUIERAS -->
+    <!-- Por ejemplo: Sobre mí, Servicios, Noticias, etc. -->
+
+    <!-- SECCIÓN CONTACTO / CIERRE -->
+    <section>
+      <h2>Contacto</h2>
+      <!-- TODO: Texto, datos de contacto ficticios, redes, etc. -->
+    </section>
+
+  </main>
+
+  <!-- PIE DE PÁGINA -->
+  <footer class="site-footer">
+    <p><a href="#hero">&copy; 2025 — 1º DAM, IES Saladillo</a></p>
+  </footer>
+
+  <!-- JavaScript mínimo para abrir/cerrar el menú lateral -->
+  <script>
+    const sideMenu = document.getElementById("sideMenu");
+    const toggleBtn = document.querySelector(".open-menu");
+
+    toggleBtn.addEventListener("click", () => {
+      sideMenu.classList.toggle("active");
+      toggleBtn.classList.toggle("active");
+
+      toggleBtn.textContent =
+        sideMenu.classList.contains("active") ? "✖" : "☰";
+    });
+  </script>
+
+</body>
+</html>
