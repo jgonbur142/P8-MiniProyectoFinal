@@ -12,9 +12,8 @@ body {
 
 /* TODO: Alinear el contenido de main, poner colores de fondo, etc. */
 main {
-  /* Ejemplo: */
-  /* width: min(1100px, 90%); */
-  /* margin: 20px auto; */
+  width: min(1100px, 90%);
+  margin: 20px auto;
 }
 
 /* ===== CABECERA Y MENÚ SUPERIOR ===== */
@@ -26,10 +25,13 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: grey;
+  margin: 0 5em;
 }
 
 .site-header h1 {
   /* TODO: Estilo del título (tamaño, margen, etc.) */
+  margin: auto;
 }
 
 .main-nav ul {
@@ -40,6 +42,7 @@ main {
 
 .main-nav a {
   /* TODO: Estilo de enlaces del menú superior (color, padding, :hover, etc.) */
+  margin: 3px;
 }
 
 /* ===== BOTÓN HAMBURGUESA PARA GESTIONAR EL MENÚ LATERAL ===== */
