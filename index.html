@@ -147,7 +147,55 @@
 
     <!-- SECCIÓN TABLA -->
     <section id="chart">
-      <h2>Tabla de datos</h2>
+      <h2>Tabla comparativa de modelos de Nintendo DS</h2>
+
+      <table> 
+          <thead>
+            <th>Modelo</th>
+            <th>Año de lanzamiento</th>
+            <th>Precio de salida</th>
+            <th>Diferencias principales</th>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>Nintendo DS</td>
+              <td>2004</td>
+              <td>149,99 €</td>
+              <td> 
+                Primer modelo, con doble pantalla (la inferior táctil), micrófono, ranura para juegos de Game Boy Advance y Wi-Fi integrado.
+              </td>
+            </tr>
+
+            <tr>
+              <td>Nintendo DS Lite</td>
+              <td>2006</td>
+              <td>149,99 €</td>
+              <td>
+                Revisión más ligera y delgada, con pantallas de mayor calidad y mejor batería. Mantiene la ranura para juegos de Game Boy Advance.
+              </td>
+            </tr>
+
+            <tr>
+              <td>Nintendo DSi</td>
+              <td>2009</td>
+              <td>169,99 €</td>
+              <td>
+                Implementa dos cámaras, una frontal y otra interior. Por primera vez se incluye una tienda digital (<em>DSiWare</em>), con pantallas más grandes y se eliminó la ranura GBA.
+              </td>
+            </tr>
+
+            <tr> 
+              <td>Nintendo DSi XL</td>
+              <td>2010</td>
+              <td>179,99 €</td>
+              <td>
+                Pantallas de 4.2", con mayor batería.
+              </td>
+            </tr>
+          </tbody>
+      </table>
+
       <!-- TODO: Crear una tabla coherente con tu temática -->
       <!-- Ejemplo: clasificación, precios, comparativa, etc. -->
     </section>
@@ -155,6 +203,19 @@
     <!-- SECCIÓN FORMULARIO -->
     <section id="form">
       <h2>Formulario</h2>
+      <p>¿Te ha gustado? ¡Puedes suscribirte para recibir notificaciones sobre publicaciones similares!</p>
+
+      <form action="#" method="post" class="formulario">
+        <label for="name">Nombre: </label>
+        <input type="text" id="name" name="name" placeholder="Escriba su nombre" required>
+
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" required>
+
+        <label for="phone">Teléfono de contacto</label>
+        <input type="tel" id="phone" name="phone" placeholder="+34 000 000 000" pattern="[0-9+ ]{6,20}" required>
+
+        <button type="submit">Suscribirse</button>
       <!-- TODO: Crear un formulario con al menos 3 campos y un botón de envío -->
     </section>
 

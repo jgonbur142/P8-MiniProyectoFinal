@@ -102,3 +102,73 @@ main {
 .site-footer a {
   /* TODO: estilo del enlace del footer y :visited si lo deseas */
 }
+
+table { /* estilo de la tabla y sus celdas*/
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1em;
+  font-size: 1em;
+}
+
+th, td{
+  border: 1px solid black;
+  padding: .5em;
+}
+
+th {
+  text-align: center;
+}
+
+#form { /*estilo del formulario*/
+  padding: 1.5em 1em;
+  background-color: lightgrey;
+  border-radius: 10px;
+  margin-top: 1em;
+}
+
+#form h2 { /* estilo del titulo del formulario*/
+  font-size: 1.5em;
+  margin-bottom: .5em;
+  text-align: center;
+}
+
+#form p { /* estilo del texto justo debajo del titulo*/
+  text-align: center;
+  margin-bottom: 1em;
+  color: lightgrey;
+}
+
+.formulario { /* estilo del contenedor del formulario*/
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.formulario label { /* estilo de los label en el formulario*/
+  font-weight: bold;
+  color: #000040;
+}
+
+.formulario input { /* estilo de los campos de texto en el formulario*/
+  padding: 0.2em;
+  border: 1px solid #000040;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.formulario button { /* estilo del boton de suscribirse*/
+  padding: .5em;
+  border: none;
+  background-color: #000040;
+  color: white;
+  font-size: 1.2em;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.formulario button:active { /* animacion que al pulsar el boton suscribirse, se hace un poco más pequeño*/
+  transform: scale(0.9);
+}
+
