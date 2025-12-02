@@ -8,6 +8,7 @@
 /* ===== ESTILOS BASE ===== */
 body {
   font-family: "Merriweather", -apple-system, "Segoe UI", sans-serif;
+  background: lightgrey;
 }
 
 /* TODO: Alinear el contenido de main, poner colores de fondo, etc. */
@@ -25,13 +26,24 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: grey;
-  margin: 0 5em;
+  background: rgba(50, 50, 50, 0.6);
+  backdrop-filter: blur(8px);
+  padding: 0.8em 2em;
+  border-radius: 0 0 20px 20px;
+  margin: 0 4em;
+  transition: transform 0.3s ease;
+}
+
+.site-header.hide { /* he investigado como hacer para que desaparezca la barra nav si voy hacia abajo, y vuelva a aparecer si voy hacia arriba*/
+  transform: translateY(-100%)
 }
 
 .site-header h1 {
   /* TODO: Estilo del título (tamaño, margen, etc.) */
-  margin: auto;
+  font-size: 2.2em;
+  font-weight: 600;
+  color: white;
+  letter-spacing: 1px;
 }
 
 .main-nav ul {
@@ -43,22 +55,42 @@ main {
 .main-nav a {
   /* TODO: Estilo de enlaces del menú superior (color, padding, :hover, etc.) */
   margin: 3px;
+  text-decoration: none;
+  color: white;
+  font-size: 0.95em;
+  font-weight: 600;
+  padding: .45em .9em;
+  border-radius: 12px;
+  
+}
+
+.main-nav a:hover {
+  background-color: #454545;
+  color: lightgrey;
 }
 
 /* ===== BOTÓN HAMBURGUESA PARA GESTIONAR EL MENÚ LATERAL ===== */
 .open-menu {
   position: fixed;
-  top: 14px;
-  left: 14px;
+  top: .25em;
+  left: .5em;
   z-index: 20;
-  font-size: 26px;
+  font-size: 30px;
   /* TODO: Colores, borde, padding, etc. */
+  background-color: white;
+  border: none;
+  padding: .2em .3em;
   cursor: pointer;
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
 }
 
 /* Efecto visual cuando el menú está abierto */
 .open-menu.active {
+  transform: rotate(90deg);
+  background: #454545;
+  color: white;
   /* TODO: Cambia color de fondo, rota un poco el icono, etc. */
 }
 
@@ -70,7 +102,9 @@ main {
   width: 230px;
   height: 100%;
   /* TODO: color de fondo, color de texto… */
+  background: grey;
   padding-top: 60px;
+  box-shadow: 5px 0 12px rgba(0, 0, 0, 0.4);
   transition: left 0.3s ease;
   z-index: 15;
 }
@@ -87,22 +121,57 @@ main {
 .side-menu a {
   display: block;
   padding: 12px 20px;
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid white;
   /* TODO: color de texto, quitar subrayado, etc. */
 }
 
 /* TODO: Añade :hover para los enlaces del menú lateral */
 .side-menu a:hover {
+  background: white;
+  color: grey;
+
 }
 
-/* ===== PIE DE PÁGINA ===== */
-.site-footer {
-  /* TODO: estilo del footer (color de fondo, texto centrado, padding…) */
+/* ===== ESTILO DE LAS SECCIONES ===== */
+section { 
+  background: white;
+  padding: 2em;
+  margin: 2em 0;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.site-footer a {
-  /* TODO: estilo del enlace del footer y :visited si lo deseas */
+section h2 {
+  color: #2a2a75;
+  margin-bottom: .8em;
+  font-size: 1.8em;
 }
 
+/* ===== GALERIA ===== */
+#gallery {
+  text-align: center;
+}
+
+#gallery figure {
+  display: inline-block;
+  margin: 1em;
+}
+
+#gallery img {
+  width: 250px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  
+}
+
+#gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* ===== TABLA ===== */
 table { /* estilo de la tabla y sus celdas*/
   width: 100%;
   border-collapse: collapse;
@@ -119,9 +188,10 @@ th {
   text-align: center;
 }
 
+/* ===== FORMULARIO ===== */
 #form { /*estilo del formulario*/
   padding: 1.5em 1em;
-  background-color: lightgrey;
+
   border-radius: 10px;
   margin-top: 1em;
 }
@@ -135,7 +205,6 @@ th {
 #form p { /* estilo del texto justo debajo del titulo*/
   text-align: center;
   margin-bottom: 1em;
-  color: lightgrey;
 }
 
 .formulario { /* estilo del contenedor del formulario*/
@@ -166,9 +235,91 @@ th {
   font-size: 1.2em;
   border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
+.formulario button:hover{
+  background-color: lightblue;
+  
+}
 .formulario button:active { /* animacion que al pulsar el boton suscribirse, se hace un poco más pequeño*/
   transform: scale(0.9);
 }
 
+/* ===== PIE DE PÁGINA ===== */
+.site-footer {
+  /* TODO: estilo del footer (color de fondo, texto centrado, padding…) */
+}
+
+.site-footer a {
+  /* TODO: estilo del enlace del footer y :visited si lo deseas */
+}
+
+/* he investigado como hacerlo responsivo para pantallas verticales */
+@media (max-width:900px){ /* para pantallas de hasta 900px*/
+
+  .site-header {
+    margin: 0 1.5em;
+    padding: 0.6em 1.4em;
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5em;
+  }
+
+  .main-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+  }
+
+  .site-header {
+    font-size: 1.5em;
+  }
+
+}
+
+@media (max-width:500px) { /*para moviles algo mas pequeños */
+  .site-header {
+    margin: 0;
+    border-radius: 0;
+  }
+
+  .main-nav a{
+    padding: 0.4em 0.8em;
+    font-size: 0.85em;
+  }
+
+  .site-header h1 {
+    font-size: 0.85em;
+  }
+
+  .open-menu { /* el menú en móvil tapaba el título de la página, asi que he movido el top*/
+  position: fixed;
+  top: 2em;
+  left: .5em;
+  z-index: 20;
+  font-size: 30px;
+  /* TODO: Colores, borde, padding, etc. */
+  background-color: white;
+  border: none;
+  padding: .2em .3em;
+  cursor: pointer;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+  }
+
+  .side-menu {
+  position: fixed;
+  top: 0;
+  left: -230px;            /* oculto inicialmente */
+  width: 230px;
+  height: 100%;
+  /* TODO: color de fondo, color de texto… */
+  background: grey;
+  padding-top: 7.5em;
+  box-shadow: 5px 0 12px rgba(0, 0, 0, 0.4);
+  transition: left 0.3s ease;
+  z-index: 15;
+  }
+}

@@ -134,17 +134,6 @@
       </p>
     </section>
 
-    <!-- SECCIÓN GALERÍA -->
-    <section id="gallery">
-      <h2>Galería de imágenes</h2>
-        <figure><img src="img/NDS.png" width="30%"></figure>
-        <figure><img src="img/NDS_presentacion.png" width="30%"></figure>
-        <figure><img src="img/NDS_prototipo.png" width="30%"></figure>
-
-      <!-- TODO: Usar CSS (preferiblemente Flex/Grid) para organizar las imágenes -->
-      <!-- Mínimo 6 imágenes -->
-    </section>
-
     <!-- SECCIÓN TABLA -->
     <section id="chart">
       <h2>Tabla comparativa de modelos de Nintendo DS</h2>
@@ -219,6 +208,17 @@
       <!-- TODO: Crear un formulario con al menos 3 campos y un botón de envío -->
     </section>
 
+    <!-- SECCIÓN GALERÍA -->
+    <section id="gallery">
+      <h2>Galería de imágenes</h2>
+        <figure><img src="img/NDS.png" width="30%"></figure>
+        <figure><img src="img/NDS_presentacion.png" width="30%"></figure>
+        <figure><img src="img/NDS_prototipo.png" width="30%"></figure>
+
+      <!-- TODO: Usar CSS (preferiblemente Flex/Grid) para organizar las imágenes -->
+      <!-- Mínimo 6 imágenes -->
+    </section>
+
     <!-- OTRAS SECCIONES QUE QUIERAS -->
     <!-- Por ejemplo: Sobre mí, Servicios, Noticias, etc. -->
 
@@ -247,6 +247,23 @@
       toggleBtn.textContent =
         sideMenu.classList.contains("active") ? "✖" : "☰";
     });
+
+    let lastScroll = 0; /* he investigado como hacer para que aparezca y desaparezca la barra nav segun haa scroll hacia abajo o hacia arriba*/
+  const header = document.querySelector(".site-header");
+
+  window.addEventListener("scroll", () => {
+    const currentScroll = window.scrollY;
+
+    if (currentScroll > lastScroll && currentScroll > 50) {
+      // Scroll hacia abajo -> ocultar
+      header.classList.add("hide");
+    } else {
+      // Scroll hacia arriba -> mostrar
+      header.classList.remove("hide");
+    }
+
+    lastScroll = currentScroll;
+  });
   </script>
 
 </body>
