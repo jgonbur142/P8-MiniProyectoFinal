@@ -164,7 +164,6 @@ section h2 {
   width: 250px;
   border-radius: 12px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
-  
 }
 
 #gallery img:hover {
@@ -191,7 +190,6 @@ th {
 /* ===== FORMULARIO ===== */
 #form { /*estilo del formulario*/
   padding: 1.5em 1em;
-
   border-radius: 10px;
   margin-top: 1em;
 }
@@ -244,6 +242,35 @@ th {
 }
 .formulario button:active { /* animacion que al pulsar el boton suscribirse, se hace un poco más pequeño*/
   transform: scale(0.9);
+}
+
+/* ===== SECCION CONTACTO ===== */
+#contact {
+
+}
+
+#contact h2 {
+
+}
+
+.contact-links {
+  width: 70%;
+  margin: auto;
+  padding: .5em;
+  background: lightgrey;
+}
+
+.contact-links a{
+  width: 50%;
+  display: block;
+  margin: auto;
+  margin-top: 1.2em;
+  padding: .2em;
+  text-decoration: none;
+  text-align: center;
+  background-color: #000040;
+  border-radius: 5px;
+
 }
 
 /* ===== PIE DE PÁGINA ===== */
