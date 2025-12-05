@@ -4,15 +4,37 @@
   padding: 0;
   box-sizing: border-box;
 }
+/* ===== FUENTE LOCAL ===== */
+@font-face {
+  font-family: "LatoLocal";
+  src: url(/fonts/Lato-Regular.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "LatoLocal";
+  src: url(/fonts/Lato-Bold.ttf) format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "LatoLocal";
+  src: url(/fonts/Lato-Italic.ttf) format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
 
 /* ===== ESTILOS BASE ===== */
 body {
-  font-family: "Merriweather", -apple-system, "Segoe UI", sans-serif;
+  font-family: "Lato","Merriweather", sans-serif;
   background: lightgrey;
 }
 
 /* TODO: Alinear el contenido de main, poner colores de fondo, etc. */
 main {
+  font-family: "LatoLocal","Lato",sans-serif;
   width: min(1100px, 90%);
   margin: 20px auto;
 }
@@ -35,7 +57,7 @@ main {
 }
 
 .site-header.hide { /* he investigado como hacer para que desaparezca la barra nav si voy hacia abajo, y vuelva a aparecer si voy hacia arriba*/
-  transform: translateY(-100%)
+  transform: translateY(-100%);
 }
 
 .site-header h1 {
@@ -107,11 +129,6 @@ main {
   left: 0;                 /* aparece cuando tiene la clase "active" */
 }
 
-.side-menu ul {
-  list-style: none;
-  padding: 0;
-}
-
 .side-menu a {
   display: block;
   padding: 12px 20px;
@@ -150,14 +167,7 @@ section h2 {
   margin: 1.5em 0;
 }
 
-section img {
-  display: block;
-  margin: 1em auto;
-  max-width: 70%;
-  border-radius: 8px;
-}
-
-section iframe, section video {
+section img, section iframe, section video {
   display: block;
   margin: 1em auto;
   max-width: 70%;
@@ -416,6 +426,7 @@ th {
     flex-direction: column;
     text-align: center;
     gap: 0.5em;
+    font-size: 1.5em;
   }
 
   .main-nav {
@@ -431,47 +442,12 @@ th {
 }
 
 @media (max-width:500px) { /*para moviles algo mas pequeños */
-  .site-header {
-    margin: 0;
-    border-radius: 0;
-  }
-
-  .main-nav a{
-    padding: 0.4em 0.8em;
-    font-size: 0.85em;
-  }
-
-  .site-header h1 {
-    font-size: 0.85em;
-  }
 
   .open-menu { /* el menú en móvil tapaba el título de la página, asi que he movido el top*/
-  position: fixed;
-  top: 2em;
-  left: .5em;
-  z-index: 20;
-  font-size: 30px;
-  /* TODO: Colores, borde, padding, etc. */
-  background-color: white;
-  border: none;
-  padding: .2em .3em;
-  cursor: pointer;
-  border-radius: 12px;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease;
+    top: 2em;
   }
 
   .side-menu {
-  position: fixed;
-  top: 0;
-  left: -230px;            /* oculto inicialmente */
-  width: 230px;
-  height: 100%;
-  /* TODO: color de fondo, color de texto… */
-  background: grey;
-  padding-top: 7.5em;
-  box-shadow: 5px 0 12px rgba(0, 0, 0, 0.4);
-  transition: left 0.3s ease;
-  z-index: 15;
+    padding-top: 7.5em;
   }
 }
