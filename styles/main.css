@@ -46,12 +46,6 @@ main {
   letter-spacing: 1px;
 }
 
-.main-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 10px;
-}
-
 .main-nav a {
   /* TODO: Estilo de enlaces del menú superior (color, padding, :hover, etc.) */
   margin: 3px;
@@ -150,6 +144,34 @@ section h2 {
   font-size: 1.8em;
 }
 
+#hero figure {
+  display: flex;
+  justify-content: center;
+  margin: 1.5em 0;
+}
+
+section img {
+  display: block;
+  margin: 1em auto;
+  max-width: 70%;
+  border-radius: 8px;
+}
+
+section iframe, section video {
+  display: block;
+  margin: 1em auto;
+  max-width: 70%;
+  border-radius: 8px;
+}
+
+section figcaption {
+  text-align: center;
+  margin-top: .5em;
+  font-weight: bold;
+  color: #2a2a75;
+  font-size: 1em;
+}
+
 /* ===== GALERIA ===== */
 #gallery {
   text-align: center;
@@ -176,6 +198,15 @@ table { /* estilo de la tabla y sus celdas*/
   border-collapse: collapse;
   margin-top: 1em;
   font-size: 1em;
+  background: lightgrey;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+thead {
+  background: #000040;
+  color: white;
 }
 
 th, td{
@@ -186,6 +217,47 @@ th, td{
 th {
   text-align: center;
 }
+
+/* ===== IMAGENES MODELOS DS ===== */
+#modelos {
+  margin-top: 2em;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5em;
+  justify-content: center;
+  padding: 1em;
+}
+
+#modelos figure {
+  background: white;
+  padding: 1em;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+#modelos a {
+  text-decoration: none;
+}
+
+#modelos figure:hover {
+  transform: scale(1.05);
+}
+
+#modelos img {
+  width: 80%;
+  max-width: 170px;
+  border-radius: 6px;
+}
+
+#modelos figcaption {
+  margin-top: 0.7em;
+  font-weight: bold;
+  color: #2a2a75;
+  font-size: 1em;
+}
+
 
 /* ===== FORMULARIO ===== */
 #form { /*estilo del formulario*/
@@ -246,40 +318,93 @@ th {
 
 /* ===== SECCION CONTACTO ===== */
 #contact {
-
+  background: white;
+  padding: 2em;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
 #contact h2 {
+  color: #2a2a75;
+  font-size: 1.8em;
+  margin-bottom: .8em;
+}
 
+#contact p {
+  margin-bottom: 1.5em;
+  font-size: 1.1em;
 }
 
 .contact-links {
-  width: 70%;
-  margin: auto;
-  padding: .5em;
-  background: lightgrey;
+  display: flex;
+  justify-content: center;
+  gap: 1.5em;
+  flex-wrap: wrap;
+  margin-top: 1em;
+}
+
+.contact-links figure {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-links figcaption {
+  margin-top: -.7em;
+  font-size: 1em;
+  font-weight: bold;
+  color: white;
+  text-align: center;
 }
 
 .contact-links a{
-  width: 50%;
-  display: block;
-  margin: auto;
-  margin-top: 1.2em;
-  padding: .2em;
   text-decoration: none;
-  text-align: center;
-  background-color: #000040;
-  border-radius: 5px;
+  background: #000040;
+  padding: 0.8em 1em;
+  color: white;
+  border-radius: 7px;
+  width: 160px;
+  height: 75px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .4em;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
 
+.contact-links a:hover {
+  background: #2a2a75;
+  transform: scale(1.05);
+}
+
+.contact-links img {
+  width: 30px;
 }
 
 /* ===== PIE DE PÁGINA ===== */
 .site-footer {
   /* TODO: estilo del footer (color de fondo, texto centrado, padding…) */
+  background: #000040;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+  border-top: 2px solid black;
 }
 
 .site-footer a {
   /* TODO: estilo del enlace del footer y :visited si lo deseas */
+  color: white;
+  text-decoration: none;
+  font-size: .8em;
+  transition: opacity 0.2s ease;
+}
+
+.site-footer a:hover {
+  opacity: 0.7;
 }
 
 /* he investigado como hacerlo responsivo para pantallas verticales */
